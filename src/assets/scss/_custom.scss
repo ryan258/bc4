@@ -1,0 +1,326 @@
+.container {
+  @include xy-grid-container();
+}
+
+.main-content {
+  background-color: $secondary-color;
+  // color: $black;
+  padding: rem-calc(5);
+  @include breakpoint(medium) {
+    margin-top: rem-calc(-30);
+    position: relative;
+    padding: rem-calc(50 80);
+  }
+}
+
+// HOME page
+// HOME page ABOUT US section
+.about-us-homepage {
+  @include breakpoint(medium) {
+    @include xy-cell(80%);
+    @include xy-cell-offset(10%);
+  }
+  p {
+    text-align: center;
+    line-height: rem-calc(40);
+    font-size: rem-calc(18);
+  }
+  .category-icons {
+    @include xy-grid();
+    .icon {
+      @include xy-cell();
+      @include breakpoint(medium) {
+        @include xy-cell(1 of 3);
+      }
+      height: rem-calc(260);
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: rem-calc(120%);
+      @include flex();
+      @include flex-align(center, bottom);
+      &.coffee {
+        background-image: url(../img/icon_coffee.svg);
+      }
+      &.dessert {
+        background-image: url(../img/icon_dessert.svg);
+      }
+      &.tea {
+        background-image: url(../img/icon_tea.svg);
+      }
+      h3 {
+        text-align: center;
+        font-family: $bellefair;
+        color: $primary-color;
+        font-size: rem-calc(38);
+      }
+    }
+  }
+}
+
+// HOME, MENU page MENU section
+// @components/_our-menu.scss
+
+
+// TESTIMONIALS section on home
+.testimonials {
+  background-color: $white;
+  padding-top: rem-calc(70);
+  // padding-bottom: rem-calc(70);
+  h2 {
+    margin-top: 0;
+  }
+}
+
+// TESTIMONIAL's ORBIT
+.slide-container {
+  @include xy-grid();
+  @include flex-align(center, middle);
+  .orbit {
+    background-color: $cream;
+    @include xy-cell(10);
+    border-left: rem-calc(5) solid $primary-color;
+    li {
+      div {
+        @include padding(2, 4, 2, 4);
+      }
+    }
+  }
+}
+
+// INTERNAL PAGES
+// - /about
+
+main.page-about {
+  @include xy-grid();
+  .image {
+    @include xy-cell();
+    @include breakpoint(medium) {
+      @include xy-cell(50%);
+    }
+    .image-effect {
+      @include rotate(-10);
+      border: rem-calc(10) solid $white;
+      @include shadow();
+      width: 90%;
+      @include breakpoint(small only) {
+        margin-bottom: rem-calc(70);
+      }
+    }
+  }
+  .page-content {
+    @include xy-cell();
+    @include breakpoint(medium) {
+      @include xy-cell(50%);
+    }
+    p {
+      font-size: rem-calc(16);
+      line-height: rem-calc(40);
+    }
+    blockquote {
+      font-size: rem-calc(30);
+    }
+  }
+}
+
+// - /process
+.page-process {
+  .process-container {
+    @include xy-grid();
+    .process-item {
+      @include xy-gutters($gutter-position: bottom);
+      @include xy-cell();
+      @include breakpoint(medium) {
+        @include xy-cell(6);
+      }
+    }
+    @include breakpoint(medium) {
+      @include odd() {
+        .process-image {
+          order: 2;
+        }
+        .process-content {
+          order: 1;
+        }
+      }
+    }
+    .process-content {
+      h3 {
+        color: $primary-color;
+        @include margin(1);
+        @include text-transform(uppercase);
+        @include font-bold(900);
+        // add the underline
+        &:after {
+          width: rem-calc(200);
+          height: rem-calc(2);
+          background-color: $secondary-color;
+          content: '';
+          display: block;
+          margin-top: rem-calc(10);
+        }
+      }
+      p {
+        font-size: rem-calc(18);
+        line-height: rem-calc(38);
+        margin-top: rem-calc(30);
+      }
+    }
+  }
+}
+
+// MENU page
+.page-menu {
+  @include xy-grid();
+  padding-bottom: 0;
+  .menu-description {
+    @include xy-cell();
+    @include breakpoint(large) {
+      @include xy-cell(5);
+    }
+    p {
+      text-align: center;
+      line-height: rem-calc(50);
+    }
+  }
+  .menu-image {
+    @include xy-cell();
+    @include breakpoint(large) {
+      @include xy-cell(7);      
+    }
+    // make the image stick to the bottom
+    @include flex-align(center, bottom);
+    @include flex();
+  }
+}
+
+
+
+// Product List
+.product-list {
+  list-style: none;
+  margin: 0;
+  li {
+    margin-bottom: rem-calc(20);
+    @include flex();
+    @include xy-grid();
+    .product {
+      @include xy-cell(8);
+      p.name {
+        @include text-transform(uppercase);
+        @include font-bold(900);
+        font-size: rem-calc(18);
+      }
+      p.description {
+        color: $secondary-color;
+        font-size: rem-calc(14);
+      }
+    }
+    .price {
+      @include xy-cell(4);
+      p {
+        text-align: right;
+        font-size: rem-calc(30);
+        @include breakpoint(small only) {
+          font-size: rem-calc(18);
+        }
+        @include font-bold(900);
+      }
+    }
+    p {
+      margin: 0;
+    }
+  }
+}
+
+// GALLERY page
+// @components/_our-menu.scss
+
+// CONTACT US page
+.page-contact {
+  background-image: url(../img/coffee_beans.jpg);
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 60%;
+  @include xy-grid();
+  @include breakpoint(medium) {
+    background-size: 40%;
+  }
+  .reservation-form {
+    @include xy-cell();
+    @include breakpoint(medium) {
+      @include xy-cell(6);
+    }
+  }
+}
+
+.field-container {
+  label {
+    color: $black;
+    font-size: rem-calc(20);
+    @include font-bold();
+    @include text-transform(uppercase);
+  }
+  input, select {
+    border: rem-calc(5), solid $primary-color;
+    height: rem-calc(50);
+  }
+  .send_btn {
+    @include  font-bold();
+    @include text-transform(uppercase);
+    font-size: rem-calc(18);
+    width: 100%;
+    height: auto;
+  }
+}
+
+
+
+.home {
+  &--intro {
+    text-align: center;
+    &-p {
+      font-size: rem-calc(22);
+    }
+  }
+  &--testimonial {
+    padding-top: rem-calc(28);
+    background: $black;
+    &-content {
+      @include xy-grid();
+      background-color: $black;
+    }
+    &-cell {
+      &-1 {
+        @include xy-cell(6);
+        margin-top: rem-calc(28);
+        margin-bottom: rem-calc(28);
+        color: $white;
+        @include breakpoint(small only) {
+          @include xy-cell();
+          order: 1;
+        }
+      }
+      &-2 {
+        @include xy-cell(6);
+        @include breakpoint(small only) {
+          @include xy-cell();
+          order: 0;
+        }
+      }
+    }
+    &-link {
+      @include font-bold(900);
+      &--more {
+        
+      }
+    }
+    &-wrapper {
+      &-small {
+        line-height: 3;
+      }
+      &-p {
+        // padding-top: rem-calc(124);
+      }
+    }
+  }
+}

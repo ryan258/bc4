@@ -1,0 +1,123 @@
+#main {
+  min-height: 100vh;
+}
+
+h1 {
+  line-height: 4.25;
+}
+
+.site-header {
+  // padding-bottom: 32px;
+}
+
+.n {
+  &-main {
+    // background-color: #009ec3;
+  }
+}
+
+.spacer {
+  background: url(/assets/img/bc-logo.png) no-repeat;
+  height: 90vh;
+  background-size: contain;
+  background-position: center;
+  background-color: #009ec3;
+  padding: 10px;
+}
+
+.no-js {
+  @include breakpoint(small only) {
+    .top-bar {
+      display: none;
+    }
+  }
+
+  @include breakpoint(medium) {
+    .title-bar {
+      display: none;
+    }
+  }
+}
+
+.menu-text {
+  /*margin: 0 auto;*/
+  width: 100%;
+  text-align: center;
+}
+
+.level-1 {
+  width: 20%;
+  text-align: center;
+  font-size: 22px;
+  background-color: $black;
+  padding: 1rem;
+}
+
+.bio {
+}
+
+.top-bar {
+  padding: 0;
+}
+
+.title-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 10px 0;
+}
+
+.top-bar,
+.top-bar-left,
+.top-bar ul {
+  background-color: #009ec3 !important;
+}
+
+.is-dropdown-submenu {
+  border: 1px solid $secondary-color;
+  padding: 0;
+}
+
+.logo {
+  // padding: 24px 0;
+}
+
+.scene {
+  &01 {
+    /*background-image: url(/assets/img/bryanCee--wibe-of-life.jpg);
+    background-size: cover;
+    background-repeat: none;*/
+    /*background-size: 100vh;*/
+    /*height: 50vh;*/
+    /*margin-bottom: 0;*/
+    // margin-bottom: $global-margin*2;
+  }
+}
+
+.padding {
+  &-top {
+    padding-top: $global-padding;
+  }
+}
+
+.social-buttons {
+  a:hover {
+    background: $primary-color;
+    color: $white;
+  }
+}
+
+.bg-song-mr-officer {
+  padding-top: 42px;
+  padding-bottom: 42px;
+  background-image: url('https://vignette1.wikia.nocookie.net/southpark/images/3/33/OfficerBarbrady.png/revision/latest?cb=20170121032327')
+    no-repeat;
+  /*backdrop-filter: blur(50px);*/
+  /*background-color: $white;*/
+
+  h1 {
+    color: white;
+    text-shadow: 2px 2px #ff0000;
+  }
+}

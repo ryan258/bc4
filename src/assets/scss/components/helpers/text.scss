@@ -1,0 +1,18 @@
+.text {
+  &-bold {
+    font-weight: bold;
+  }
+  &-italics {
+    font-style: italics;
+  }
+}
+
+.no {
+  &-border {
+    border: 0 !important;
+  }
+}
+
+.purchase-buttons {
+  font-size: 24px;
+}

@@ -1,0 +1,47 @@
+---
+page-title: Writings by Bryan Cee
+---
+
+<div class="grid-container">
+  <div class="grid-x grid-padding-x">
+    <div class="cell small-12">
+      <h2>
+        <a href="https://tcagenda.com/2017/sunshine-snowfall-bryan-cee-story/">From sunshine to snowfall: The Bryan Cee story</a>
+      </h2>
+    </div>
+    <h1></h1>
+  </div>
+</div>
+<!-- <div class="row">
+  <div class="columns large-12">
+    <h1>Articles by Ryan Johnson</h1>
+  </div>
+</div> -->
+<div class="row">
+  <div class="column bg-yellow">
+    {{> c-article--wide}}
+  </div>
+</div>
+<div class="row medium-up-2 large-up-3">
+  <!-- <div class="callout flex-container"> -->
+    {{#repeat 0}}
+    <div class="column bg-yellow callout">
+      {{> c-article}}
+    </div>
+    {{/repeat}}
+    <!-- <div class="column bg-black callout">
+      {{> c-article}}
+    </div>
+    <div class="column bg-yellow callout">
+      {{> c-article}}
+    </div>
+    <div class="column bg-black callout">
+      {{> c-article}}
+    </div> -->
+    {{#each articles}}
+    <div class="column bg-yellow callout">
+      <p>{{title}}</p>
+    </div>
+    {{/each}}
+  <!-- </div> -->
+</div>
