@@ -1,0 +1,54 @@
+.bio {
+  &-wrapper {}
+  .main-content {
+    @include xy-grid;
+  }
+  &-cell {
+    &-1 {
+      text-align: center;
+      @include margin(1, null, null, null);
+    }
+    @include breakpoint(medium) {
+      &-1 {
+        @include xy-cell(4);
+      }
+      &-2 {
+        @include xy-cell(8);
+      }
+    }
+  }
+}
+
+// // - /about
+
+// main.page-about {
+//   @include xy-grid();
+//   .image {
+//     @include xy-cell();
+//     @include breakpoint(medium) {
+//       @include xy-cell(50%);
+//     }
+//     .image-effect {
+//       @include rotate(-10);
+//       border: rem-calc(10) solid $white;
+//       @include shadow();
+//       width: 90%;
+//       @include breakpoint(small only) {
+//         margin-bottom: rem-calc(70);
+//       }
+//     }
+//   }
+//   .page-content {
+//     @include xy-cell();
+//     @include breakpoint(medium) {
+//       @include xy-cell(50%);
+//     }
+//     p {
+//       font-size: rem-calc(16);
+//       line-height: rem-calc(40);
+//     }
+//     blockquote {
+//       font-size: rem-calc(30);
+//     }
+//   }
+// }

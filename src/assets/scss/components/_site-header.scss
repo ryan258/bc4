@@ -29,9 +29,11 @@
   // }
 
   .header-content {
-    padding-top: rem-calc(48);
+    padding-top: rem-calc(56);
+    padding-bottom: rem-calc(16);
     @include breakpoint(medium) {
-      padding-top: rem-calc(30);
+      padding-top: rem-calc(16);
+      padding-bottom: rem-calc(16);
     }
     // @include padding(1);
     .top-section {
@@ -54,22 +56,23 @@
       }
       
     }
-    .bottom-section {
-      @include margin(1);
-      @include breakpoint(medium) {
-        height: rem-calc(48);
-        @include flex();
-        @include flex-align(center, bottom);
-      }
-      .slogan {
-        color: $white;
-        position: relative;
-        text-align: center;
-        z-index: 1;
-        @include font-bold(900);
-        @include text-transform(uppercase);
-      }
-    }
+    // .bottom-section {
+    //   margin: 0;
+    //   @include breakpoint(medium) {
+    //     @include margin(1);
+    //     height: rem-calc(48);
+    //     @include flex();
+    //     @include flex-align(center, bottom);
+    //   }
+    //   .slogan {
+    //     color: $white;
+    //     position: relative;
+    //     text-align: center;
+    //     z-index: 1;
+    //     @include font-bold(900);
+    //     @include text-transform(uppercase);
+    //   }
+    // }
   }
   // &:after {
   //   @include faded_black();

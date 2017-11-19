@@ -3,7 +3,7 @@
 }
 
 h1 {
-  line-height: 4.25;
+  // line-height: 4.25;
 }
 
 .site-header {
@@ -95,11 +95,11 @@ h1 {
   }
 }
 
-.padding {
-  &-top {
-    padding-top: $global-padding;
-  }
-}
+// .padding {
+//   &-top {
+//     padding-top: $global-padding;
+//   }
+// }
 
 .social-buttons {
   a:hover {

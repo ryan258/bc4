@@ -1,3 +1,17 @@
+.social-buttons {
+  li {
+    a {
+      background-color: $primary-color;
+      color: $white;
+      @include font-bold(800);
+      &:hover {
+        background-color: $primary-color;
+        color: $secondary-color;
+      }
+    }
+  }
+}
+
 .menus {
   @include xy-cell();
   @include breakpoint(medium) {
@@ -12,6 +26,8 @@
       @include flex-align(right, middle);
     }
     a {
+      // background-color: $primary-color;
+      color: $secondary-color;
       &:before {
         display: inline-block;
         font-family: 'Fontawesome';
@@ -20,10 +36,17 @@
         -webkit-font-smoothing: antialiased;
         content: '\f08e';
       }
-      &[href*="facebook.com"]::before { content: '\f082'; }
-      &[href*="twitter.com"]::before { content: '\f099'; }
-      &[href*="instagram.com"]::before { content: '\f16d'; }
-      &[href*="youtube.com"]::before { content: '\f16a'; }
+      &:hover {
+        color: $secondary-color;
+      }
+      &[href*="facebook.com"]::before { content: '\f082';
+      color: $secondary-color; }
+      &[href*="twitter.com"]::before { content: '\f099';
+      color: $secondary-color; }
+      &[href*="instagram.com"]::before { content: '\f16d';
+      color: $secondary-color; }
+      &[href*="youtube.com"]::before { content: '\f16a';
+      color: $secondary-color; }
     }
   }
 

@@ -10,20 +10,4 @@
   }
 }
 
-.chorus {
-  @extend .callout;
-  @extend .bg-yellow;
-  /*border-top: 2px solid $primary-color;
-  border-bottom: 2px solid $primary-color;*/
 
-  &-label {
-
-  }
-}
-
-.verse {
-  @extend .callout;
-  @extend .bg-blue;
-  /*border-top: 2px solid $secondary-color;
-  border-bottom: 2px solid $secondary-color;*/
-}

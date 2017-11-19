@@ -1,0 +1,284 @@
+.home {
+  // &--intro {
+  //   text-align: center;
+  //   &_wrap {
+  //     margin-bottom: rem-calc(56);
+  //   }
+  //   &-p {
+  //     font-size: rem-calc(22);
+  //   }
+  // }
+  ////////
+  &_feature {
+    @include breakpoint(medium only) {
+      @include xy-grid;
+    }
+    // @include xy-grid;
+  }
+  &_intro {
+    &-wrap {
+      @include padding(1, null, 1, null);
+      background-color: $black;
+      color: $white;
+      .main-content {
+        text-align: center;
+      }
+    }
+    &-title {
+
+    }
+    &-content {
+      &_p {
+        font-size: rem-calc(22);
+      }
+    }
+  }
+  &_album {
+    &-wrap {
+      @include padding(1, null, 2, null);
+      // @include xy-cell(6);
+      @include breakpoint(medium only) {
+        @include xy-cell(7);
+      }
+      // background-color: $primary-color;
+    }
+    .main-content {
+      @include xy-grid();
+      @include flex-align(center, middle);
+    }
+    &-cell {
+      @include breakpoint(large) {
+        &-1 {
+          @include xy-cell(6);
+        }
+        &-2 {
+          @include xy-cell(6);
+        }
+      }
+    }
+  }
+  &_event {
+    &-wrap {
+      @include padding(1, null, 2, null);
+      background-color: $secondary-color;
+      // @include xy-cell(6);
+      @include breakpoint(medium only) {
+        @include xy-cell(5);
+        // background-color: lighten($color: $light-grey, $amount: 33);
+      }
+    }
+    .main-content {
+      @include xy-grid();
+      @include flex-align(center, middle);
+    }
+    &-cell {
+      @include breakpoint(large) {
+        &-1 {
+          @include xy-cell(6);
+          order: 2;
+        }
+        &-2 {
+          @include xy-cell(6);
+          order: 1;
+        }
+      }
+    }
+    &-date {
+      @include font-bold(900);
+      border-bottom: 1px solid $black;
+      @include margin(1, null, null, null);
+    }
+    &-title {
+      @include font-bold(900);
+    }
+  }
+  ////////
+  &_review {
+    &-wrap {
+      @include padding(2, null, 1, null);
+      background-color: $black;
+      color: $white;
+    }
+    .main-content {
+      @include xy-grid();
+      @include flex-align(center, middle);
+    }
+    // padding-top: rem-calc(0);
+    // margin-top: rem-calc(28);
+    // padding-left: 0;
+    // padding-right: 0;
+    &-content {
+      // @include xy-grid();
+      // background-color: $black;
+    }
+    p {
+      color: $white;
+      @include font-italic;
+    }
+    a {
+      @include font-bold(900);
+    }
+    &-cell {
+      &-1 {
+        @include breakpoint(large) {
+          @include xy-cell(6);
+        }
+        @include breakpoint(large only) {
+          // @include xy-cell();
+          order: 0;
+        }
+      }
+
+      &-2 {
+        @include breakpoint(large) {
+          @include xy-cell(6);
+        }
+        // margin-top: rem-calc(28);
+        // margin-bottom: rem-calc(28);
+        // color: $white;
+        @include breakpoint(large only) {
+          // @include xy-cell();
+          order: 1;
+        }
+      }
+    }
+    blockquote {
+      @include margin(1, null, 1, null);
+    }
+    &-link {
+      // @include font-bold(900);
+      // &--more {
+        
+      // }
+    }
+    &-wrapper {
+      // &-small {
+      //   line-height: 3;
+      // }
+      // &-p {
+      //   // padding-top: rem-calc(124);
+      // }
+    }
+  }
+  ////////
+  // &--testimonial {
+  //   padding-top: rem-calc(0);
+  //   // margin-top: rem-calc(28);
+  //   padding-left: 0;
+  //   padding-right: 0;
+  //   &_wrap {
+  //     background: $black;
+  //   }
+  //   &-content {
+  //     @include xy-grid();
+  //     background-color: $black;
+  //   }
+  //   &-cell {
+  //     &-1 {
+  //       @include xy-cell(6);
+  //       margin-top: rem-calc(28);
+  //       margin-bottom: rem-calc(28);
+  //       color: $white;
+  //       @include breakpoint(small only) {
+  //         @include xy-cell();
+  //         order: 1;
+  //       }
+  //     }
+  //     &-2 {
+  //       @include xy-cell(6);
+  //       @include breakpoint(small only) {
+  //         @include xy-cell();
+  //         order: 0;
+  //       }
+  //     }
+  //   }
+  //   &-link {
+  //     @include font-bold(900);
+  //     &--more {
+        
+  //     }
+  //   }
+  //   &-wrapper {
+  //     &-small {
+  //       line-height: 3;
+  //     }
+  //     &-p {
+  //       // padding-top: rem-calc(124);
+  //     }
+  //   }
+  // }
+}
+
+// HOME page
+// HOME page ABOUT US section
+.about-us-homepage {
+  @include breakpoint(medium) {
+    @include xy-cell(80%);
+    @include xy-cell-offset(10%);
+  }
+  p {
+    text-align: center;
+    line-height: rem-calc(40);
+    font-size: rem-calc(18);
+  }
+  .category-icons {
+    @include xy-grid();
+    .icon {
+      @include xy-cell();
+      @include breakpoint(medium) {
+        @include xy-cell(1 of 3);
+      }
+      height: rem-calc(260);
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: rem-calc(120%);
+      @include flex();
+      @include flex-align(center, bottom);
+      &.coffee {
+        background-image: url(../img/icon_coffee.svg);
+      }
+      &.dessert {
+        background-image: url(../img/icon_dessert.svg);
+      }
+      &.tea {
+        background-image: url(../img/icon_tea.svg);
+      }
+      h3 {
+        text-align: center;
+        font-family: $bellefair;
+        color: $primary-color;
+        font-size: rem-calc(38);
+      }
+    }
+  }
+}
+
+// HOME, MENU page MENU section
+// @components/_our-menu.scss
+
+
+// TESTIMONIALS section on home
+.testimonials {
+  background-color: $white;
+  padding-top: rem-calc(70);
+  // padding-bottom: rem-calc(70);
+  h2 {
+    margin-top: 0;
+  }
+}
+
+// TESTIMONIAL's ORBIT
+.slide-container {
+  @include xy-grid();
+  @include flex-align(center, middle);
+  .orbit {
+    background-color: $cream;
+    @include xy-cell(10);
+    border-left: rem-calc(5) solid $primary-color;
+    li {
+      div {
+        @include padding(2, 4, 2, 4);
+      }
+    }
+  }
+}

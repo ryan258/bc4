@@ -1,0 +1,64 @@
+.song {
+  &-wrapper {}
+  .main-content {
+    @include xy-grid;
+  }
+  &-title {
+    // @include xy-cell(12);
+    @include padding(2, null, 2, null);
+    @include margin(null, null, 1, null);
+    // @include flex-align-self(bottom);
+    
+    
+    
+    h1 {
+      @include font-bold(800);
+      background-color: $black;
+      float: left;
+      @include padding(1, 1, 1, 1);
+      // @include flex-align-self(bottom);
+      line-height: rem-calc(64);
+    }
+    // text-align: center;
+    background-color: $black;
+    color: $white;
+    background-image: url('../img/officer-barbrady.webp');
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    height: 8rem;
+  }
+  &-cell {
+    &-0 {
+      @include xy-cell(12);
+      @include clearfix;
+      @include flex-align(null, middle);
+    }
+    &-1 {
+      @include xy-cell(7);
+    }
+    &-2 {
+      @include xy-cell(5);
+    }
+  }
+}
+
+.chorus {
+  // @extend .callout;
+  // @extend .bg-yellow;
+  /*border-top: 2px solid $primary-color;
+  border-bottom: 2px solid $primary-color;*/
+  border-left: 3px solid $primary-color;
+  @include padding(null, null, null, 1);
+  &-label {
+
+  }
+}
+
+.verse {
+  // @extend .callout;
+  // @extend .bg-blue;
+  /*border-top: 2px solid $secondary-color;
+  border-bottom: 2px solid $secondary-color;*/
+  border-left: 3px solid $secondary-color;
+  @include padding(null, null, null, 1);
+}
